@@ -20,14 +20,22 @@ The [getFunctionFromDll](https://github.com/KenjiEndo15/ReflectiveDLLInjection/b
 ![alt text](https://github.com/KenjiEndo15/ReflectiveDLLInjection/blob/main/schemas/2.drawio.svg "2")
 
 ### copyHeaders
-The [copyHeaders](https://github.com/KenjiEndo15/ReflectiveDLLInjection/blob/main/src/reflective_loader_operations.c#L230-L237) function copies the PE headers from the unloaded DLL to a previously allocated virtual memory region.
+The [copyHeaders](https://github.com/KenjiEndo15/ReflectiveDLLInjection/blob/main/src/reflective_loader_operations.c#L230-L237) function copies the headers from the unloaded DLL to a previously allocated virtual memory region.
 
 ![alt text](https://github.com/KenjiEndo15/ReflectiveDLLInjection/blob/main/schemas/3.drawio.svg "3")
 
 ### copySections
-The [copySections](https://github.com/KenjiEndo15/ReflectiveDLLInjection/blob/main/src/reflective_loader_operations.c#L239-259) function copes  the PE sections from the unloaded DLL to a previously allocated virtual memory region.
+The [copySections](https://github.com/KenjiEndo15/ReflectiveDLLInjection/blob/main/src/reflective_loader_operations.c#L239-L259) function copies the sections from the unloaded DLL to a previously allocated virtual memory region.
 
 ![alt text](https://github.com/KenjiEndo15/ReflectiveDLLInjection/blob/main/schemas/4.drawio.svg "4")
+
+### initializeIAT
+The [initializeIAT](https://github.com/KenjiEndo15/ReflectiveDLLInjection/blob/main/src/reflective_loader_operations.c#L261-L286) function parses the [Import Address Table (IAT)](https://alice.climent.red/posts/how-and-why-to-unhook-the-import-address-table/) to update function pointer addresses.
+
+![alt text](https://github.com/KenjiEndo15/ReflectiveDLLInjection/blob/main/schemas/5.drawio.svg "5")
+
+### performRelocations
+The [performRelocations](https://github.com/KenjiEndo15/ReflectiveDLLInjection/blob/main/src/reflective_loader_operations.c#L288-L321) function resolves [relocations](https://0xrick.github.io/win-internals/pe7/).
 
 ## Improvements
 A non-exhaustive list:
