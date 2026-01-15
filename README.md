@@ -37,6 +37,8 @@ The [initializeIAT](https://github.com/KenjiEndo15/ReflectiveDLLInjection/blob/m
 ### performRelocations
 The [performRelocations](https://github.com/KenjiEndo15/ReflectiveDLLInjection/blob/main/src/reflective_loader_operations.c#L288-L321) function resolves [relocations](https://0xrick.github.io/win-internals/pe7/).
 
+![alt text](https://github.com/KenjiEndo15/ReflectiveDLLInjection/blob/main/schemas/6.drawio.svg "6")
+
 ## Improvements
 A non-exhaustive list:
 - Use `HRESULT` for cleaner error handling.
