@@ -10,9 +10,14 @@ Some interesting facts stem from the way the executable code is extracted. The f
 Here are some schemas to understand PE parsing (there may be some errors).
 
 ### getDllAddr
-The [getDllAddr function](https://github.com/KenjiEndo15/ReflectiveDLLInjection/blob/main/src/reflective_loader_operations.c#L112-L147) retrieves a process loaded DLL based on [PEB](https://alice.climent.red/posts/direct-syscalls-hells-halos-syswhispers2/#retrieving-windows-dll-addresses-the-process-environment-block-peb).
+The [getDllAddr](https://github.com/KenjiEndo15/ReflectiveDLLInjection/blob/main/src/reflective_loader_operations.c#L112-L147) function retrieves a process loaded DLL based on [PEB](https://alice.climent.red/posts/direct-syscalls-hells-halos-syswhispers2/#retrieving-windows-dll-addresses-the-process-environment-block-peb).
 
 ![alt text](https://github.com/KenjiEndo15/ReflectiveDLLInjection/blob/main/schemas/1.drawio.svg "1")
+
+### getFunctionFromDll
+The [getFunctionFromDll](https://github.com/KenjiEndo15/ReflectiveDLLInjection/blob/main/src/reflective_loader_operations.c#L149-L183) function parses the [Export Address Table (EAT)](https://alice.climent.red/posts/direct-syscalls-hells-halos-syswhispers2/#retrieving-windows-api-functions-addresses-parsing-the-export-address-table-eat) to retrieve a function from a DLL.
+
+![alt text](https://github.com/KenjiEndo15/ReflectiveDLLInjection/blob/main/schemas/2.drawio.svg "1")
 
 ## Improvements
 A non-exhaustive list:
