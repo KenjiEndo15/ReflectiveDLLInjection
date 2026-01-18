@@ -9,6 +9,8 @@ Some interesting facts stem from the way the executable code is extracted. The f
 ## Schemas
 Here are some schemas to understand PE parsing (there may be some errors).
 
+**[!] Images should be viewed in light mode.**
+
 ### getDllAddr
 The [getDllAddr](https://github.com/KenjiEndo15/ReflectiveDLLInjection/blob/main/src/reflective_loader_operations.c#L112-L147) function retrieves a process-loaded DLL based on the [PEB](https://alice.climent.red/posts/direct-syscalls-hells-halos-syswhispers2/#retrieving-windows-dll-addresses-the-process-environment-block-peb).
 
